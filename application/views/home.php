@@ -1,22 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
+<?php $this->load->view('templates/header'); ?>
 <body>
-	<h1>felicidades usted se ha logueado</h1>
-	<table>
-		<tr>
-			<td>Usuario : </td>
-			<td><input class="user"></input></td>
-
-		</tr>
-		<tr>
-			<td>Contraseña :</td>
-			<td><input class="pass"></input></td>
-
-		</tr>
-
-	</table>
+    
 </body>
-</html>
+<?php $this->load->view('templates/footer'); ?>
