@@ -1,15 +1,13 @@
 <?php
 
-
 class Home extends CI_Controller {
-    
+
     public function __construct() {
-        parent::__construct();
+	parent::__construct();
     }
-    
+
     public function index() {
-        $this->load->view('vista1');
-       // print_r("entro");
+	$this->load->view('home');
     }
 
 }
