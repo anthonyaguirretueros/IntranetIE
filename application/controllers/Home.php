@@ -8,7 +8,8 @@ class Home extends CI_Controller {
     }
     
     public function index() {
-        $this->load->view('home');
+        $this->load->view('vista1');
+       // print_r("entro");
     }
 
 }
