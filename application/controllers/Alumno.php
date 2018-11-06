@@ -38,6 +38,7 @@ class alumno extends CI_Controller
 
 			// $alumno = $this->input->post();
 			// echo json_encode($alumno);
+		
 		}
 	}
 }
