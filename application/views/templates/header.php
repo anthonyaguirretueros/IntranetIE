@@ -1,12 +1,16 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-	<?php // defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-        <title></title>
-        <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-        <!--Import Bootstrap.css-->
-        <link type="text/css" rel="stylesheet" href="<?php echo asset_url() . "/bootstrap/css/bootstrap.min.css"; ?>">
-	
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Responsive Admin</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="<?php echo base_url()?>assets/adminator/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="<?php echo base_url()?>assets/adminator/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="<?php echo base_url()?>assets/adminator/css/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
