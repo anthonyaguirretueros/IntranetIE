@@ -1,37 +1,372 @@
-<?php $this->load->view('templates/header'); ?>
-<body>
-    <section class="features-icons bg-light text-center">
-	<div class="container">
-	    <div class="row">
-		<div class="col-lg-4">
-		    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-			<div class="features-icons-icon d-flex">
-			    <i class="icon-screen-desktop m-auto text-primary"></i>
-			</div>
-			<h3>Fully Responsive</h3>
-			<p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
-		    </div>
-		</div>
-		<div class="col-lg-4">
-		    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-			<div class="features-icons-icon d-flex">
-			    <i class="icon-layers m-auto text-primary"></i>
-			</div>
-			<h3>Bootstrap 4 Ready</h3>
-			<p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
-		    </div>
-		</div>
-		<div class="col-lg-4">
-		    <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-			<div class="features-icons-icon d-flex">
-			    <i class="icon-check m-auto text-primary"></i>
-			</div>
-			<h3>Easy to Use</h3>
-			<p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
-		    </div>
-		</div>
-	    </div>
-	</div>
-    </section>
-</body>
-<?php $this->load->view('templates/footer'); ?>
+<?php $this->load->view('templates/header.php'); ?>
+
+<div id="wrapper">
+    <?php $this->load->view('templates/navbar.php'); ?>
+    <?php $this->load->view('templates/slider.php'); ?>
+    <!-- /. NAV SIDE  -->
+    <div id="page-wrapper" >
+        <div id="page-inner">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>ADMIN DASHBOARD</h2>   
+                </div>
+            </div>              
+            <!-- /. ROW  -->
+            <hr />
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <div class="alert alert-info">
+                        <strong>Welcome Jhon Doe ! </strong> You Have No pending Task For Today.
+                    </div>
+
+                </div>
+            </div>
+            <!-- /. ROW  --> 
+            <div class="row text-center pad-top">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-circle-o-notch fa-5x"></i>
+                            <h4>Check Data</h4>
+                        </a>
+                    </div>
+
+
+                </div> 
+
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-envelope-o fa-5x"></i>
+                            <h4>Mail Box</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-lightbulb-o fa-5x"></i>
+                            <h4>New Issues</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-users fa-5x"></i>
+                            <h4>See Users</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-key fa-5x"></i>
+                            <h4>Admin </h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-comments-o fa-5x"></i>
+                            <h4>Support</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- /. ROW  --> 
+            <div class="row text-center pad-top">
+
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-clipboard fa-5x"></i>
+                            <h4>All Docs</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-gear fa-5x"></i>
+                            <h4>Settings</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-wechat fa-5x"></i>
+                            <h4>Live Talk</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-bell-o fa-5x"></i>
+                            <h4>Notifications </h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-rocket fa-5x"></i>
+                            <h4>Launch</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-user fa-5x"></i>
+                            <h4>Register User</h4>
+                        </a>
+                    </div>
+
+
+                </div> 
+            </div>   
+            <!-- /. ROW  -->    
+            <div class="row text-center pad-top">
+
+
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-envelope-o fa-5x"></i>
+                            <h4>Mail Box</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-lightbulb-o fa-5x"></i>
+                            <h4>New Issues</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-users fa-5x"></i>
+                            <h4>See Users</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-key fa-5x"></i>
+                            <h4>Admin </h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="#" >
+                            <i class="fa fa-comments-o fa-5x"></i>
+                            <h4>Support</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-circle-o-notch fa-5x"></i>
+                            <h4>Check Data</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- /. ROW  -->  
+            <div class="row text-center pad-top">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-rocket fa-5x"></i>
+                            <h4>Launch</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-clipboard fa-5x"></i>
+                            <h4>All Docs</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-gear fa-5x"></i>
+                            <h4>Settings</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-wechat fa-5x"></i>
+                            <h4>Live Talk</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-bell-o fa-5x"></i>
+                            <h4>Notifications </h4>
+                        </a>
+                    </div>
+
+
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-user fa-5x"></i>
+                            <h4>Register User</h4>
+                        </a>
+                    </div>
+
+
+                </div> 
+            </div>   
+            <!-- /. ROW  -->  
+            <div class="row text-center pad-top">
+
+
+
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-lightbulb-o fa-5x"></i>
+                            <h4>New Issues</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-users fa-5x"></i>
+                            <h4>See Users</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-key fa-5x"></i>
+                            <h4>Admin </h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-comments-o fa-5x"></i>
+                            <h4>Support</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-circle-o-notch fa-5x"></i>
+                            <h4>Check Data</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                    <div class="div-square">
+                        <a href="blank.html" >
+                            <i class="fa fa-envelope-o fa-5x"></i>
+                            <h4>Mail Box</h4>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- /. ROW  -->   
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <br/>
+                    <div class="alert alert-danger">
+                        <strong>Want More Icons Free ? </strong> Checkout fontawesome website and use any icon <a target="_blank" href="http://fortawesome.github.io/Font-Awesome/icons/">Click Here</a>.
+                    </div>
+
+                </div>
+            </div>
+            <!-- /. ROW  --> 
+        </div>
+        <!-- /. PAGE INNER  -->
+    </div>
+    <!-- /. PAGE WRAPPER  -->
+</div>
+<div class="footer">
+    <div class="row">
+        <div class="col-lg-12" >
+            &copy;  2014 yourdomain.com | Design by: <a href="http://binarytheme.com" style="color:#fff;" target="_blank">www.binarytheme.com</a>
+        </div>
+    </div>
+</div>
+
+
+<?php $this->load->view('templates/footer.php'); ?>
