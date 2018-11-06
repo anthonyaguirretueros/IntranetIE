@@ -8,7 +8,7 @@
         <div id="page-inner">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>ADMIN DASHBOARD</h2>   
+                    <h2>Bienvenido Administrador</h2>   
                 </div>
             </div>              
             <!-- /. ROW  -->
@@ -148,7 +148,7 @@
             <!-- /. ROW  -->    
             <div class="row text-center pad-top">
 
-                
+
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                     <div class="div-square">
                         <a href="blank.html" >

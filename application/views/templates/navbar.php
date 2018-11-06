@@ -6,7 +6,7 @@
         <?php if ($this->session->userdata('username')): ?>
             <a class="navbar-brand" href="<?= site_url('login/logout') ?>">Desconectarse</a>
         <?php else : ?>
-            <a class="navbar-brand" href="<?= site_url('login') ?>">Conectarse</a>
+            <a class="navbar-brand" href="<?= site_url('login') ?>">Cambio de Usuario</a>
         <?php endif; ?>
         <!--<a href="#" style="color:#fff;">LOGOUT</a>-->  
     </span>
