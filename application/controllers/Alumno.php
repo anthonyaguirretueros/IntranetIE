@@ -34,7 +34,7 @@ class alumno extends CI_Controller {
                 $response["error"] = "Error al insertar, verifique campo!!!";
             } else {
                 $response["mensaje"] = "Alumno registrado.";
-                $response->alumnos = $this->m_alumno->getAll();
+//                $response->alumnos = $this->m_alumno->getAll();
             } 
             return json_encode($response);
         }

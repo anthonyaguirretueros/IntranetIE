@@ -25,12 +25,11 @@ var addAlumno = function () {
             dataType: 'json',
             data: params,
             success: function (response) {
-//                if (response.hasOwnProperty("error")) {
-//                    getGrowl("Error", response["error"], "danger");
-//                } else {
-//                    getGrowl("Sistema", response["message"], "success");
-//                    setDataTable(response["alumnos"]);
-//                }
+                if (response.hasOwnProperty("error")) {
+                    getGrowl("Error", response["error"], "danger");
+                } else {
+                    getGrowl("Sistema", response["message"], "success");
+                }
             }
         });
     }
@@ -42,13 +41,9 @@ var setDataTable = function (data) {
     for (var row in data) {
         var alumno = data[row];
         console.log(alumno);
-//        trs += "<tr>";
-//        trs += "<td><input type='hidden' value='" + alumno["id_sistema"] + "'>" + alumno["codigo"] + "</td>";
-//        trs += "<td>" + alumno["nombre"] + "</td>";
-//        trs += "<td>" + alumno["nomb_ctrl_comercial"] + "</td>";
-//        trs += "<td>" + alumno["nomb_tipo_sistema"] + "</td>";
-//        trs += "<td><input type='checkbox' " + (alumno["estado"] === "1" ? "checked=''" : "") + " disabled=''></td>";
-//        trs += "</tr>";
+        trs += "<tr>";
+        trs += "<td></td>";
+        trs += "</tr>";
     }
-//    $("#myTable tbody").html(trs);
+    $("#myTable tbody").html(trs);
 };
