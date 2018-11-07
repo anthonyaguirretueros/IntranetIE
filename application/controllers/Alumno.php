@@ -35,4 +35,5 @@ class alumno extends CI_Controller
 		}
 	}
 }
+
  ?>
