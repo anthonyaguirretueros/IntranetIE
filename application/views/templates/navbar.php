@@ -16,10 +16,5 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <!--                <a class="navbar-brand" href="#">
-                            <img src="<?php // echo base_url()       ?>assets/adminator/img/logo.png" />
-                        </a>-->
     </div>
-
-    <!--</div>-->
 </div>

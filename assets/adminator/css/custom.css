@@ -33,7 +33,8 @@ body {
     margin:10px 20px 10px 0px;
     background-color:#fff!important;
     padding:10px;
-    min-height:1050px;
+    /*min-height:1050px;*/
+    min-height:-webkit-fill-available;
 }
 .pad-top {
     /*padding-top:15px;*/
@@ -50,7 +51,7 @@ body {
 .sidebar-collapse > .nav > li > a {
     padding:15px 10px;
     color: #214761;
-    font-weight: 900;
+    font-weight: 600;
     font-size: 16px;
 }
 .sidebar-collapse > .nav > li {
@@ -135,10 +136,8 @@ body {
     #page-wrapper{
         margin: 0 0 0 260px;
         /*padding: 15px 30px;*/
-        min-height: 1050px;
-
+        /*min-height: 1050px;*/
     }
-
 
     .navbar-side {
         z-index: 1;
