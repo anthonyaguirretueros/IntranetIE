@@ -80,5 +80,5 @@
 
 <?php $this->load->view("templates/resources.php"); ?>
 <script src="<?php echo base_url() . "assets/jsrequired/alumnos.js"; ?>"></script>
-<?php $this->load->view("templates/footer.php"); ?>
+<?php // $this->load->view("templates/footer.php"); ?>
 
