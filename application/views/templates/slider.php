@@ -3,13 +3,13 @@
     <div class="sidebar-collapse">
         <ul class="nav" id="main-menu">
             <li class="active-link">
-                <a href="index.html" ><i class="fa fa-desktop "></i>Dashboard </a>
+                <a href="home" ><i class="fa fa-desktop "></i>Gestión </a>
             </li>
             <li>
-                <a href="ui.html"><i class="fa fa-table "></i>UI Elements  </a>
+                <a href="#"><i class="fa fa-table "></i>Asignación  </a>
             </li>
-            <li>
-                <a href="blank.html"><i class="fa fa-edit "></i>Blank Page </a>
+<!--            <li>
+                <a href="#"><i class="fa fa-edit "></i>Blank Page </a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-qrcode "></i>My Link One</a>
@@ -25,7 +25,7 @@
             </li>
             <li>
                 <a href="#"><i class="fa fa-edit "></i>My Link Five </a>
-            </li>
+            </li>-->
         </ul>
     </div>
 </nav>

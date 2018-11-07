@@ -29,14 +29,13 @@ class alumno extends CI_Controller {
     public function insertAlumno() {
         if ($this->input->post()) {
             $alumno = $this->input->post();
-            $response = $this->m_alumno->insert($alumno);
-            if (empty($response)) {
+            $data = $this->m_alumno->insert($alumno);
+            if (empty($data)) {
                 $response["error"] = "Error al insertar, verifique campo!!!";
             } else {
-                $response["mensaje"] = "Alumno registrado.";
-//                $response->alumnos = $this->m_alumno->getAll();
+                $response["message"] = "Alumno registrado.";
             } 
-            return json_encode($response);
+            echo json_encode($response);
         }
     }
 }

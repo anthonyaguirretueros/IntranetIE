@@ -15,7 +15,7 @@
             <div class="container-fluid">
                 <div class="col-lg-5">
                     <!--<form method="post" action="GuardarAlumno">-->
-                    <form method="post">
+                    <form method="post" id="alumnoForm" name="alumnoForm">
                         <div class="form-group col-lg-12">
                             <label>Nombres</label>
                             <input type="text" name="nombre" id="nombre" class="form-control" required="true">
