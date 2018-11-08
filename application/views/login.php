@@ -1,31 +1,93 @@
+<!-- 
+<?php 
+  session_start(); ?>
+
+ -->
+
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>INTRANET</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
- <!--        <link rel="stylesheet" href="assets/bootstrap/css/estilo.css"> -->
+    
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome: para los iconos -->
+    <link rel="stylesheet" href="assets/bootstrap/css/font-awesome.css">
+    <!-- Sweet Alert: alertas JavaScript presentables para el usuario (más bonitas que el alert) -->
+    <link rel="stylesheet" href="assets/bootstrap/css/sweetalert.css">
+    <!-- Estilos personalizados: archivo personalizado 100% real no feik -->
+    <link rel="stylesheet" href="assets/bootstrap/css/style.css">
+
+
     </head>
     <body>
-        <div class="row">
-       
-            <form class="form-horizontal" style="margin:0 auto; margin-top: 10%;" method="post">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Usuario</label>
-                    <input type="text"  name="username" class="form-control"  aria-describedby="emailHelp" placeholder="Ingrese su Usuario">
+ <div class="container">
+    <form action=""  class="form-horizontal" method="post">
+      <div class="row">
+      
+        <div class="col-xs-12 col-md-4 col-md-offset-4">
+          <!-- Margen superior (css personalizado )-->
+          <div class="spacing-1"></div>
 
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" name="password" placeholder="Password">
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Acepto las condiciones</label>
-                </div>
-                <button type="submit" value="ingresar" class="btn btn-primary">Ingresar</button>
-            </form></div>
+          <!-- Estructura del formulario -->
+          <fieldset>
+
+            <legend class="center">Login</legend>
+
+            <!-- Caja de texto para usuario -->
+            <label class="sr-only" for="user">Usuario</label>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="fa fa-user"></i></div>
+              <input type="text" class="form-control" id="user" name="username" placeholder="Ingresa tu usuario">
+            </div>
+
+            <!-- Div espaciador -->
+            <div class="spacing-2"></div>
+
+            <!-- Caja de texto para la clave-->
+            <label class="sr-only" for="clave">Contraseña</label>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="fa fa-lock"></i></div>
+              <input type="password" autocomplete="off" name="password" class="form-control" id="clave" placeholder="Ingresa tu contraseña">
+            </div>
+
+            <!-- Animacion de load (solo sera visible cuando el cliente espere una respuesta del servidor )-->
+            <div class="row" id="load" hidden="hidden">
+              <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5">
+                <img src="assets/bootstrap/img/load.gif" width="100%" alt="">
+              </div>
+              <div class="col-xs-12 center text-accent">
+                <span>Validando información...</span>
+              </div>
+            </div>
+            <!-- Fin load -->
+
+            <!-- boton #login para activar la funcion click y enviar el los datos mediante ajax -->
+            <div class="row">
+              <div class="col-xs-8 col-xs-offset-2">
+                <div class="spacing-2"></div>
+                <button type="submit" class="btn btn-primary btn-block" name="button" id="login">Iniciar sesion</button>
+              </div>
+            </div>
+
+            <section class="text-accent center">
+              <div class="spacing-2"></div>
+
+            </section>
+
+          </fieldset>
+        </div>
+
+      </div>
+      </form>
+    </div>
+
+     <!-- Jquery -->
+    <script src="assets/bootstrap/js/jquery.js"></script>
+    <!-- Bootstrap js -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- SweetAlert js -->
+    <script src="assets/bootstrap/js/sweetalert.min.js"></script>
+    <!-- Js personalizado -->
     </body>
 </html>
