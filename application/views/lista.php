@@ -40,8 +40,9 @@ and open the template in the editor.
                 <td><?php echo $datos['descripcion']; ?></td>
                 <td><?php echo $datos['tamanio']; ?></td>
                 <td><?php echo $datos['tipo']; ?></td>
-                <td><a href="<?= site_url('Alumno/VerArchivos') ?>?id=<?php echo $datos['id_documento']?>"><?php echo $datos['nombre_archivo']; ?></a></td>
+                <td><a href="<?= site_url('Alumno/VerArchivos');?>?id=<?php echo $datos['id_documento']?>"><?php echo $datos['nombre_archivo']; ?></a></td>
 
+                <!-- temrinar como llegaar a archivo -->
             </tr>
                 
           <?php  } ?>

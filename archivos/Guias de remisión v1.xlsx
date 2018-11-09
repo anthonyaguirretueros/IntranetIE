@@ -1,0 +1,13 @@
+$query1 = $this->db->select('artsu.id_provart, artsu.codigo_art_prov, pn.tipo_persona, artsu.descripcion, CONCAT_WS('') , pn.dni, (SELECT count(par.id_provart_unidadmedida) FROM tb_provart_unidadmedida par WHERE par.id_provart=artsu.id_provart)n_umc, artsu.factor_compra, (select uni.unidad_medida from tb_unidad_medida uni where uni.id_unidadmedida=artsu.id_unidadmedida_pago limit 1) unidad_medida_pago, registro_sanitario')
+                                         ->from('tb_proveedor pr')
+                                         ->join('tb_proveedor_articulo artsu', 'pr.id_proveedor=artsu.id_proveedor', 'left')
+                                         ->join('tb_persona pn', 'pr.id_persona_natural=pn.id_persona', 'left')
+                                         ->where($param)
+                                         ->get_compiled_select();
+
+                        $query2 = $this->db->select('artsu.id_provart, artsu.codigo_art_prov, 1 as tipo_persona, artsu.descripcion,  pj.nombre_comercial, pj.razon_social, pj.ruc, (SELECT count(par.id_provart_unidadmedida) FROM tb_provart_unidadmedida par WHERE par.id_provart=artsu.id_provart)n_umc, artsu.factor_compra, (select uni.unidad_medida from tb_unidad_medida uni where uni.id_unidadmedida=artsu.id_unidadmedida_pago limit 1) unidad_medida_pago, registro_sanitario')
+                                         ->from('tb_proveedor pr')
+                                         ->join('tb_proveedor_articulo artsu', 'pr.id_proveedor=artsu.id_proveedor', 'left')
+                                         ->join('tb_persona pn', 'pr.id_persona_natural=pn.id_persona', 'left')
+                                         ->where($param)
+                                         ->get_compiled_select();

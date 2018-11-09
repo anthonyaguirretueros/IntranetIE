@@ -1,25 +1,28 @@
 <?php $this->load->view('templates/header.php'); ?>
 <?php $this->load->view('templates/navbar.php'); ?>
-<?php $this->load->view('templates/slider.php'); ?>
+<?php // $this->load->view('templates/slider.php'); ?>
 <!DOCTYPE html>
 
 <?php
 include_once 'config.inc.php';
 if (isset($_POST['subir'])) {
-
+      print_r("entro");
+// print_r($_POST);
+    
     $nombre = $_FILES['archivo']['name'];
     $tipo = $_FILES['archivo']['type'];
     $tamanio = $_FILES['archivo']['size'];
     $ruta = $_FILES['archivo']['tmp_name'];
 
-    $destino = "application/views/archivos/" . $nombre;
-        // echo "<pre>"; print_r($destino);echo "</pre>";
+    $destino = "archivos/".$nombre;
+ //  echo "<pre>"; print_r($destino);echo "</pre>";
+
 
 
     if ($nombre != "") {
 
         if (copy($ruta, $destino)) {
-            
+             //echo "<pre>"; print_r($nombre);echo "</pre>";
             $titulo= $_POST['titulo'];
             $descri= $_POST['descripcion'];
             $db = new Conect_MySql();
@@ -29,7 +32,7 @@ if (isset($_POST['subir'])) {
               // echo "<pre>"; print_r($sql);echo "</pre>";
 
             if($query){
-                echo "Se guardo correctamente";
+                echo "<center>Se guardó correctamente</center>";
             }
         } else {
             echo "Error";
