@@ -13,6 +13,20 @@ class alumno extends CI_Controller {
         $response["alumnos"] = $this->m_alumno->getalumno();
         $this->load->view("alumnos", $response);
     }
+     public function verlista() {
+
+        $this->load->view("lista");
+    }
+      public function SubirArchivos() {
+
+        $this->load->view("index");
+    }
+
+     public function VerArchivos() {
+
+        $this->load->view("archivo");
+    }
+
 
     public function GuardarAlumno() {
         if ($this->input->post()) {

@@ -24,9 +24,9 @@
 
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                     <div class="div-square">
-                        <a href="#" >
+                   <a href="<?= site_url('Alumno/SubirArchivos'); ?>" >
                             <i class="fa fa-envelope-o fa-5x"></i>
-                            <h4>Mail Box</h4>
+                            <h4>Subida de archivos</h4>
                         </a>
                     </div>
                 </div>
