@@ -3,7 +3,7 @@
     <div class="sidebar-collapse">
         <ul class="nav" id="main-menu">
             <li class="active-link">
-                <a href="home" ><i class="fa fa-desktop "></i>Gestión </a>
+                <a href="<?php echo base_url('index.php/home') ?>" ><i class="fa fa-desktop "></i>Gestión </a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-table "></i>Asignación  </a>
