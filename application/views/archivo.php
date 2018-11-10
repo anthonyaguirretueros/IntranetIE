@@ -19,7 +19,7 @@ and open the template in the editor.
                 if($datos['nombre_archivo']==""){?>
         <p>NO tiene archivos</p>
                 <?php }else{ ?>
-        <iframe src="application/views/archivos/<?php echo $datos['nombre_archivo']; ?>"></iframe>
+        <iframe src="archivos/<?php echo $datos['nombre_archivo']; ?>"></iframe>
                 
                 <?php } } ?>
     </body>
