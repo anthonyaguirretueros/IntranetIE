@@ -13,7 +13,8 @@ if (isset($_POST['subir'])) {
     $ruta = $_FILES['archivo']['tmp_name'];
 
     $destino = "application/views/archivos/" . $nombre;
-        // echo "<pre>"; print_r($destino);echo "</pre>";
+        // echo "<pre>"; print_r($destino);echo "</pre>"
+
 
 
     if ($nombre != "") {
