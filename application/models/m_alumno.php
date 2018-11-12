@@ -14,10 +14,21 @@ class m_alumno extends CI_Model {
         return $this->db->query("SELECT id_alumno,nombre,apellido,cumpleanos,grado,nivel FROM tb_alumno")->result();
     }
 
+     public function ModificarAlumno(int $id_alumno) {
+          
+        return $this->db->query("SELECT id_alumno,nombre,apellido,cumpleanos,grado,nivel FROM tb_alumno where id_alumno ={$id_alumno}")->row();
+             print_r("entro modificar");
+    }
 //    public function setalumno(string $nombre, string $apellido, string $cumpleanos, string $grado, string $nivel) {
 //        return $this->db->query("INSERT INTO tb_alumno(nombre,apellido,cumpleanos,grado,nivel) values ({$nombre},{$apellido},{$cumpleanos},{$grado},{$nivel})");
 //    }
-    
+    public function ActualizarAlumno (int $id_alumno,string $nombre,string $apellido,string $cumpleanos,string $grado,string $nivel){
+        print_r("entro actualizar");
+
+         return $this->db->query("UPDATE tb_alumno  SET nombre ={$nombre},apellido ,={$apellido},cumpleanos = {$cumpleanos},grado ={$grado},nivel ={$nivel} where id_alumno={id_alumno} ");
+     print_r("entro actualizar");
+
+    }
     public function getAll(){
         $query = $this->db->get($this->table);
         return $query->result_array();

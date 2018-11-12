@@ -1,22 +1,14 @@
 <?php $this->load->view("templates/header.php"); ?>
-
-<div id="wrapper">
-    <?php $this->load->view('templates/navbar.php'); ?>
-    <?php $this->load->view('templates/slider.php'); ?>
-    <!-- /. NAV SIDE  -->
-    <div id="page-wrapper" >
-        <div id="page-inner">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Registro de Alumnos</h2>   
-                </div>
-            </div>   
-            <hr />
-            <div class="container-fluid">
+<?php print_r("entro vista Modificar"); ?>
+<div class="container-fluid">
                 <div class="col-lg-5">
                     <!--<form method="post" action="GuardarAlumno">-->
-                    <form method="post" id="alumnoForm" name="alumnoForm">
-                        <div class="form-group col-lg-12">
+                    <form method="post" id="" name="alumnoForm">
+                            <div class="form-group col-lg-3">
+                            <label>ID_Alumno</label>
+                            <input readonly="true" type="text" name="id_alumno"  class="form-control">
+                        </div>
+                        <div class="form-group col-lg-8">
                             <label>Nombres</label>
                             <input type="text" name="nombre" id="nombre" class="form-control" required="true">
                         </div>
@@ -65,20 +57,12 @@
                                 <td><?php echo $alumno->cumpleanos ?></td>
                                 <td><?php echo $alumno->grado ?></td>
                                 <td><?php echo $alumno->nivel ?></td>
-                                <td><a href ='Alumno/ModificarAlumno/<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-user'></span>Modificar</a></td>
-                                <td><a href ='Alumno/EliminarAlumno<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-trash'></span>Eliminar</a></td>
+                                <td><a href ='#<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-user'></span>Modificar</a></td>
+                                <td><a href ='#<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-trash'></span>Eliminar</a></td>
                             </tr>
                         <?php } ?>
 
                     </table>		
                 </div>
             </div>
-
-        </div>
-    </div>
-</div>
-
-<?php $this->load->view("templates/resources.php"); ?>
-<script src="<?php echo base_url() . "assets/jsrequired/alumnos.js"; ?>"></script>
-<?php // $this->load->view("templates/footer.php"); ?>
-
+            <?php print_r($alumnos); ?>

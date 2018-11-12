@@ -6,7 +6,7 @@
 <?php
 include_once 'config.inc.php';
 if (isset($_POST['subir'])) {
-      print_r("entro");
+     // print_r("entro");
 // print_r($_POST);
     
     $nombre = $_FILES['archivo']['name'];
@@ -51,16 +51,16 @@ if (isset($_POST['subir'])) {
                 <table class="table">
                     <tr>
                         <td><label>Titulo</label></td>
-                        <td><input type="text" name="titulo"></td>
+                        <td><input type="text" name="titulo" required=""></td>
                     </tr>
                     <tr>
                         <td><label>Descripcion</label></td>
-                        <td><textarea name="descripcion"></textarea></td>
+                        <td><textarea name="descripcion"  required=""></textarea></td>
                     </tr>
                     <tr>
                         <td colspan="2"><input type="file" name="archivo"></td>
                     <tr>
-                        <td><input style=" font-size: 15px;" class="btn btn-success"  type="submit" value="subir" name="subir"></td>
+                        <td><input style=" font-size: 15px;" class="btn btn-success"  type="submit" value="subir" name="subir"  required=""></td>
                         <td ><a style=" font-size: 15px;  width: 150px;"  class="btn btn-primary" href="<?= site_url('Alumno/verlista'); ?>">lista</a></td>
                     </tr>
                 </table>
