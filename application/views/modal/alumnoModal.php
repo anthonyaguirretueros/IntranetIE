@@ -1,5 +1,5 @@
 <div id="alumnoModal" class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-     <div class="modal-dialog" role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Modificar Alumno</h5>
@@ -8,40 +8,42 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post"  name="alumnoFormModal" action="">
+                <form method="post"  id="alumnoFormModal" name="alumnoFormModal" action="">
                     <div class="form-group col-lg-3">
                         <label>ID_Alumno</label>
-                        <input readonly="true" type="text" name="id_alumno" class="form-control" value="">
+                        <input type="hidden" id="m_id_alumno" name="m_id_alumno">
+                        <input readonly="true" type="text" id="m_cod_alumno" name="m_cod_alumno" class="form-control" value="">
                     </div>
                     <div class="form-group col-lg-8">
                         <label>Nombres</label>
-                        <input type="text" name="m_nombre" id="nombre" class="form-control" required="true" value="" >
+                        <input type="text" name="m_nombre" id="m_nombre" class="form-control" required="true" value="" >
                     </div>
                     <div class="form-group col-lg-12">
                         <label>apellido</label>
-                        <input type="text" name="m_apellido" id="apellido" class="form-control" required="true" value="" >
+                        <input type="text" name="m_apellido" id="m_apellido" class="form-control" required="true" value="" >
                     </div>
                     <div class="form-group col-lg-12">
                         <label>cumpleaños</label>
-                        <input type="text" name="m_cumpleanos" id="cumpleanos" class="form-control" required="true" value="" >
+                        <input type="text" name="m_cumpleanos" id="m_cumpleanos" class="form-control" required="true" value="" >
                     </div>
                     <div class="form-group col-lg-12">
                         <label>grado</label>
-                        <input type="text" name="m_grado" id="grado" class="form-control" required="true" value="" >
+                        <input type="text" name="m_grado" id="m_grado" class="form-control" required="true" value="" >
                     </div>	
                     <div class="form-group col-lg-12">
                         <label>nivel</label>
-                        <input type="text" name="m_nivel" id="nivel" class="form-control" required="true" value="" >
+                        <input type="text" name="m_nivel" id="m_nivel" class="form-control" required="true" value="" >
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <div class="btn-toolbar pull-right">
-                    <input type="submit" class="btn btn-primary" value="guardar">
-                    <input type="reset"  class="btn btn-danger" value="Limpiar" >
+
+                    <input onclick="modifyAlumno()" type="button" class="btn btn-success" value="Guardar">
+                    <input onclick="closeModal()" type="button"  class="btn btn-danger" value="Cancelar" >
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>
