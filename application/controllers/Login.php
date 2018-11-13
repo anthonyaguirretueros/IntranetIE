@@ -6,6 +6,8 @@ class Login extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
+         $this->load->library('form_validation');
+         $this->load->model('m_login');
     }
 
     public function index() {
@@ -28,6 +30,40 @@ class Login extends CI_Controller {
         $this->session->sess_destroy();
         redirect('home');
     }
+
+
+    public function vista() {
+    $this->load->view('registro_alumno');
+    }
+
+    public function registrarusuario() {
+
+        if ($this->input->post()) {
+            $this->form_validation->set_rules('username','username','required');
+            $this->form_validation->set_rules('nombres','nombres','required');
+            $this->form_validation->set_rules('apellidos','apellidos','required');
+            $this->form_validation->set_rules('tipo','tipo','required');
+            $this->form_validation->set_rules('password','password','required');
+
+
+                    if ($this->form_validation->run() == FALSE) 
+                    {
+                        
+                    echo "no entrará";
+
+                    }elseif ($this->m_login->setUsuario($_POST)) {
+                        echo "entro";
+                    }
+
+
+               }
+
+
+
+
+
+    }
+
 
 }
 

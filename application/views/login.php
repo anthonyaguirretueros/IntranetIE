@@ -61,6 +61,14 @@
               <div class="col-xs-8 col-xs-offset-2">
                 <div class="spacing-2"></div>
                 <button type="submit" class="btn btn-primary btn-block" name="button" id="login">Iniciar sesion</button>
+                <a href="<?= site_url('Login/vista'); ?>" >Registrate..!</a>
+              </div>
+            </div>
+              <div class="row">
+              <div class="col-xs-8 col-xs-offset-2">
+                <div class="spacing-2"></div>
+           
+                
               </div>
             </div>
 
