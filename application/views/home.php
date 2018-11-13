@@ -13,7 +13,15 @@
             </div>              
             <hr />
             <div class="row text-center pad-top">
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                    <div class="div-square">
+                        <a href="profesor" >
+                            <i class="fa fa-users fa-5x"></i>
+                            <h4>Gestion de Profesores</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <div class="div-square">
                         <a href="alumno" >
                             <i class="fa fa-user fa-5x"></i>
@@ -22,27 +30,21 @@
                     </div>
                 </div>  
 
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <div class="div-square">
-                   <a href="<?= site_url('Alumno/SubirArchivos'); ?>" >
-                             <i class="fa fa-clipboard fa-5x"></i>
+                        <a href="<?= site_url('Alumno/SubirArchivos'); ?>" >
+                            <i class="fa fa-clipboard fa-5x"></i>
                             <h4>Subida de archivos</h4>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+            </div>
+            <div class="row text-center pad-top">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
                     <div class="div-square">
                         <a href="#">
                             <i class="fa fa-lightbulb-o fa-5x"></i>
                             <h4>New Issues</h4>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-                    <div class="div-square">
-                        <a href="#" >
-                            <i class="fa fa-users fa-5x"></i>
-                            <h4>Gestion de Profesores</h4>
                         </a>
                     </div>
                 </div>
@@ -52,11 +54,3 @@
     </div>
     <!-- /. PAGE WRAPPER  -->
 </div>
-<div class="footer">
-    <div class="row">
-        <div class="col-lg-12" >
-            &copy;  2014 yourdomain.com | Design by: <a href="http://binarytheme.com" style="color:#fff;" target="_blank">www.binarytheme.com</a>
-        </div>
-    </div>
-</div>
-<?php $this->load->view('templates/footer.php'); ?>
