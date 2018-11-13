@@ -4,7 +4,7 @@
                 <div class="col-lg-5">
                     <!--<form method="post" action="GuardarAlumno">-->
                               <!-- modificar ruta  Alumno/ActualizarAlumno-->
-                    <form method="post"  name="" action="Alumno/ActualizarAlumno">
+                    <form method="post"  name="" action="<?php echo base_url();?>Alumno/ActualizarAlumno">
 
                             <div class="form-group col-lg-3">
                             <label>ID_Alumno</label>
@@ -32,6 +32,7 @@
                         </div>
                         <!-- <div class="clear-fix"></div> -->
                         <div class="form-group col-lg-12">
+<!--                             llevar aqui el controlador -->
                             <input type="submit" class="btn btn-primary" value="guardar">
                             <!--<input type="button"  class="btn btn-primary" value="Enviar" onclick="addAlumno()">-->
                             <input type="reset"  class="btn btn-danger" value="Limpiar" >

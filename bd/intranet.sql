@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-11-08 20:21:31
+Date: 2018-11-12 22:00:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,21 +20,24 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `tbl_documentos`;
 CREATE TABLE `tbl_documentos` (
-  `id_documento` int(10) unsigned NOT NULL,
+  `id_documento` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `titulo` varchar(150) DEFAULT NULL,
   `descripcion` mediumtext,
   `tamanio` int(10) unsigned DEFAULT NULL,
   `tipo` varchar(150) DEFAULT NULL,
-  `nombre_archivo` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `nombre_archivo` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_documento`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tbl_documentos
 -- ----------------------------
 INSERT INTO `tbl_documentos` VALUES ('4', 'prueba', 'esta es una prueba', '171758', 'application/pdf', 'EJEMPLO.pdf');
-INSERT INTO `tbl_documentos` VALUES ('0', 'BiografÃ­a de HerÃ¡clito', '* Adjunto mi tarea de filosofia\r\n*Adjunto mi tarea de religion', '11433', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'traicionero-corazon serrano.docx');
-INSERT INTO `tbl_documentos` VALUES ('0', 'mix dinamita', '123', '13445', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'Mix dinamita.docx');
-INSERT INTO `tbl_documentos` VALUES ('0', 'ddd', 'dddd', '13445', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'Mix dinamita.docx');
+INSERT INTO `tbl_documentos` VALUES ('5', 'BiografÃ­a de HerÃ¡clito', '* Adjunto mi tarea de filosofia\r\n*Adjunto mi tarea de religion', '11433', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'traicionero-corazon serrano.docx');
+INSERT INTO `tbl_documentos` VALUES ('6', 'mix dinamita', '123', '13445', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'Mix dinamita.docx');
+INSERT INTO `tbl_documentos` VALUES ('7', 'ddd', 'dddd', '13445', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'Mix dinamita.docx');
+INSERT INTO `tbl_documentos` VALUES ('8', 'anthony', 'd1d1d1', '62732', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'ANEXO 05.docx');
+INSERT INTO `tbl_documentos` VALUES ('9', 'anthony', 'esta es la teoria de todos', '419313', 'application/pdf', 'TeorÃ­a.pdf');
 
 -- ----------------------------
 -- Table structure for tb_acceso
@@ -65,7 +68,7 @@ CREATE TABLE `tb_alumno` (
   `grado` varchar(50) NOT NULL,
   `nivel` varchar(50) NOT NULL,
   PRIMARY KEY (`id_alumno`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of tb_alumno
@@ -76,6 +79,7 @@ INSERT INTO `tb_alumno` VALUES ('3', 'gg', 'agg', 'diciembre', '2', 'secundaria'
 INSERT INTO `tb_alumno` VALUES ('4', 'anibal', 'hinostroza', 'diciembre', '1', 'PRIMARIA');
 INSERT INTO `tb_alumno` VALUES ('5', 'carlos', 'laban ', 'asdas', 'adasd', 'adsa');
 INSERT INTO `tb_alumno` VALUES ('6', 'alejandro', 'blujme', 'diceimbre', 'adsa', '12e1');
+INSERT INTO `tb_alumno` VALUES ('7', 'nombre', 'apellido', 'cumpleaños ', 'grado', ' nivel');
 
 -- ----------------------------
 -- Table structure for tb_curso
