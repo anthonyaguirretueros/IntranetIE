@@ -13,23 +13,24 @@ class alumno extends CI_Controller {
         $response["alumnos"] = $this->m_alumno->getalumno();
         $this->load->view("alumnos", $response);
     }
-     public function verlista() {
+
+    public function verlista() {
 
         $this->load->view("lista");
     }
-      public function SubirArchivos() {
+
+    public function SubirArchivos() {
 
         $this->load->view("index");
     }
 
-     public function VerArchivos() {
+    public function VerArchivos() {
 
         $this->load->view("archivo");
     }
 
-
     public function GuardarAlumno() {
-       
+
         if ($this->input->post()) {
             // echo "<pre>";	print_r($_POST);die();echo "</pre>";
             $nombre = $this->db->escape($_POST["nombre"]);
@@ -41,37 +42,34 @@ class alumno extends CI_Controller {
         }
     }
 
+    public function ModificarAlumno($id_alumno = null) {
 
-    public function ModificarAlumno ($id_alumno =null){
-     
-    
+
         if ($id_alumno != null) {
-               // echo " modifica";
-            $id_alumno = $this->db->escape((int)$id_alumno);
+            // echo " modifica";
+            $id_alumno = $this->db->escape((int) $id_alumno);
 
             $alumnos = $this->m_alumno->ModificarAlumno($id_alumno);
 
-            $this->load->view("modificar_alumnos",compact("alumnos"));
+            $this->load->view("modificar_alumnos", compact("alumnos"));
         }
-
     }
 
-    public function ActualizarAlumno(){
-          print_r("entro ActualizarAlumno");
-       if($this->input->post()) {
+    public function ActualizarAlumno() {
+        print_r("entro ActualizarAlumno");
+        if ($this->input->post()) {
 
-            $id_alumno = $this->db->escape((int)$_POST["id_alumno"]);
+            $id_alumno = $this->db->escape((int) $_POST["id_alumno"]);
             $nombre = $this->db->escape($_POST["nombre"]);
             $apellido = $this->db->escape($_POST["apellido"]);
             $cumpleanos = $this->db->escape($_POST["cumpleanos"]);
             $grado = $this->db->escape($_POST["grado"]);
             $nivel = $this->db->escape($_POST["nivel"]);
-             
-           if ($this->m_alumno->ActualizarAlumno($id_alumno,$nombre, $apellido, $cumpleanos, $grado, $nivel)) {
-                    header("Location:".baser_url()."alumno");
-                }
-        }
 
+            if ($this->m_alumno->ActualizarAlumno($id_alumno, $nombre, $apellido, $cumpleanos, $grado, $nivel)) {
+                header("Location:" . baser_url() . "alumno");
+            }
+        }
     }
 
     public function insertAlumno() {
@@ -82,10 +80,11 @@ class alumno extends CI_Controller {
                 $response["error"] = "Error al insertar, verifique campo!!!";
             } else {
                 $response["message"] = "Alumno registrado.";
-            } 
+            }
             echo json_encode($response);
         }
     }
+
 }
 
 ?>

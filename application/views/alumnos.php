@@ -11,7 +11,7 @@
                     <h2>Registro de Alumnos</h2>   
                 </div>
             </div>   
-            <hr />
+            <hr/>
             <div class="container-fluid">
                 <div class="col-lg-5">
                     <!--<form method="post" action="GuardarAlumno">-->
@@ -59,27 +59,33 @@
                         <!-- me webeo :v -->
                         <?php foreach ($alumnos as $alumno) { ?>
                             <tr>
-                                <td><?php echo $alumno->id_alumno ?></td>
+                                <td><input hidden="" value="<?php echo $alumno->id_alumno ?>"><?php echo $alumno->id_alumno ?></td>
                                 <td><?php echo $alumno->nombre ?></td>
                                 <td><?php echo $alumno->apellido ?></td>
                                 <td><?php echo $alumno->cumpleanos ?></td>
                                 <td><?php echo $alumno->grado ?></td>
                                 <td><?php echo $alumno->nivel ?></td>
-                                 <td><a href ='Alumno/ActualizarAlumno/<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-user'></span>Modificar</a></td>
-                                <td><a href ='Alumno/ModificarAlumno/<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-user'></span>Modificar</a></td>
-                                <td><a href ='Alumno/EliminarAlumno<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-trash'></span>Eliminar</a></td>
+
+                                <td>
+                                    <button onclick="abrirModal()" type="button" class="btn btn-primary">
+                                        <span class ='glyphicon glyphicon-user'></span> Modificar
+                                    </button>
+                                </td>
+                                <td><a onclick=""><span class ='glyphicon glyphicon-user'></span>Eliminar</a></td>
+                                <!--<td><a href ='Alumno/ModificarAlumno/<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-user'></span>Modificar</a></td>-->
+                                <!--<td><a href ='Alumno/EliminarAlumno<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-trash'></span>Eliminar</a></td>-->
                             </tr>
                         <?php } ?>
-
                     </table>		
                 </div>
             </div>
-
         </div>
     </div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alumnoModal">
+        Launch demo modal
+    </button>
+    <?php $this->load->view("modal/alumnoModal"); ?> 
 </div>
-
-<?php $this->load->view("templates/resources.php"); ?>
+<?php $this->load->view("templates/resources"); ?>
 <script src="<?php echo base_url() . "assets/jsrequired/alumnos.js"; ?>"></script>
-<?php // $this->load->view("templates/footer.php"); ?>
 
