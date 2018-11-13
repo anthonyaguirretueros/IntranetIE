@@ -17,7 +17,7 @@
                     <div class="div-square">
                         <a href="alumno" >
                             <i class="fa fa-user fa-5x"></i>
-                            <h4>Registro Alumnos</h4>
+                            <h4>Gestión de Alumnos</h4>
                         </a>
                     </div>
                 </div>  
@@ -25,7 +25,7 @@
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
                     <div class="div-square">
                    <a href="<?= site_url('Alumno/SubirArchivos'); ?>" >
-                            <i class="fa fa-envelope-o fa-5x"></i>
+                             <i class="fa fa-clipboard fa-5x"></i>
                             <h4>Subida de archivos</h4>
                         </a>
                     </div>
@@ -42,7 +42,7 @@
                     <div class="div-square">
                         <a href="#" >
                             <i class="fa fa-users fa-5x"></i>
-                            <h4>See Users</h4>
+                            <h4>Gestion de Profesores</h4>
                         </a>
                     </div>
                 </div>

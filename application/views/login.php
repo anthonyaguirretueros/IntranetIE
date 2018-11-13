@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>INTRANET</title>
-    <link rel="icon" type="image/png" href="/img/logo.png" />    
+<!--    <link rel="icon" type="image/png" href="/img/logo.png" />    -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome: para los iconos -->
     <link rel="stylesheet" href="assets/bootstrap/css/font-awesome.css">

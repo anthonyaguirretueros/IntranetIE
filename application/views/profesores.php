@@ -8,7 +8,7 @@
         <div id="page-inner">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Registro de Alumnos</h2>   
+                    <h2>Registro de Profesore</h2>   
                 </div>
             </div>   
             <hr/>
