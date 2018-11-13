@@ -6,8 +6,8 @@ class Login extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-         $this->load->library('form_validation');
-         $this->load->model('m_login');
+        $this->load->library('form_validation');
+        $this->load->model('m_login');
     }
 
     public function index() {
@@ -31,39 +31,40 @@ class Login extends CI_Controller {
         redirect('home');
     }
 
-
     public function vista() {
-    $this->load->view('registro_alumno');
+        $this->load->view('registro_alumno');
     }
 
-    public function registrarusuario() {
+//    public function registrarusuario() {
+//
+//        if ($this->input->post()) {
+//            $this->form_validation->set_rules('username', 'username', 'required');
+//            $this->form_validation->set_rules('nombres', 'nombres', 'required');
+//            $this->form_validation->set_rules('apellidos', 'apellidos', 'required');
+//            $this->form_validation->set_rules('tipo', 'tipo', 'required');
+//            $this->form_validation->set_rules('password', 'password', 'required');
+//
+//            if ($this->form_validation->run() == FALSE) {
+//
+//                echo "no entrará";
+//            } elseif ($this->m_login->setUsuario($_POST)) {
+//                echo "entro";
+//            }
+//        }
+//    }
 
+    public function insertUsuario() {
         if ($this->input->post()) {
-            $this->form_validation->set_rules('username','username','required');
-            $this->form_validation->set_rules('nombres','nombres','required');
-            $this->form_validation->set_rules('apellidos','apellidos','required');
-            $this->form_validation->set_rules('tipo','tipo','required');
-            $this->form_validation->set_rules('password','password','required');
-
-
-                    if ($this->form_validation->run() == FALSE) 
-                    {
-                        
-                    echo "no entrará";
-
-                    }elseif ($this->m_login->setUsuario($_POST)) {
-                        echo "entro";
-                    }
-
-
-               }
-
-
-
-
-
+            $usuario = $this->input->post();
+            $resultado = $this->m_login->insert($usuario);
+            if ($resultado > 0) {
+                $response["message"] = "Registo exitoso.";
+            } else {
+                $response["error"] = "Error al registrar, verifique!!!";
+            }
+            echo json_encode($response);
+        }
     }
-
 
 }
 

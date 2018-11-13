@@ -1,39 +1,39 @@
-<?php if(!defined('BASEPATH')) exit('no direct script acces allowed');
+<?php
 
-/**
-* 
-*/
-class M_login extends CI_Model
-{
-	public $variable;
-	
-	function __construct()
-	{
-		parent::__construct();
-	}
-	public function login($username,$password)
-	{	
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-		$this->db->where('username',$username);
-		$this->db->where('password',$password);
-		$q = $this->db->get('tb_login');
+class M_login extends CI_Model {
 
-		if ($q->num_rows()>0) {
-			 return true;
-		}else{
-			return false;
-		}
-	}	
+    var $table = "tb_usuario";
+    public $variable;
 
-	public function setUsuario(array $datos)
-	{
-		return $this->db->insert('tb_login');
+    function __construct() {
+        parent::__construct();
+    }
 
-	}
+    public function index() {
+        
+    }
 
+    public function login($username, $password) {
+        $this->db->where('username', $username);
+        $this->db->where('password', $password);
+        $query = $this->db->get($this->table);
 
+        if ($query->num_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function insert($usuario) {
+        $this->db->set("username", $usuario["username"]);
+        $this->db->set("password", $usuario["password"]);
+        $this->db->set("estado", (int) $usuario["estado"]);
+        $this->db->set("id_perfil", (int) $usuario["id_perfil"]);
+        $this->db->insert($this->table);
+        return $this->db->insert_id();
+    }
 
 }
-
-
- ?>
