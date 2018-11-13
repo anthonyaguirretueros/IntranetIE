@@ -14,7 +14,6 @@
             <hr/>
             <div class="container-fluid">
                 <div class="col-lg-5">
-                    <!--<form method="post" action="GuardarAlumno">-->
                     <form method="post" id="alumnoForm" name="alumnoForm">
                         <div class="form-group col-lg-12">
                             <label>Nombres</label>
@@ -56,7 +55,6 @@
                             <th colspan="2">Opciones</th>
                         </tr>
                         <!-- PHP siempre con php// HTML con html -->
-                        <!-- me webeo :v -->
                         <?php foreach ($alumnos as $alumno) { ?>
                             <tr>
                                 <td><input hidden="" value="<?php echo $alumno->id_alumno ?>"><?php echo $alumno->id_alumno ?></td>
@@ -71,7 +69,12 @@
                                         <span class ='glyphicon glyphicon-user'></span> Modificar
                                     </button>
                                 </td>
-                                <td><a onclick=""><span class ='glyphicon glyphicon-user'></span>Eliminar</a></td>
+                                <td>
+                                    <button onclick="" type="button" class="btn btn-primary">
+                                        <span class ='glyphicon glyphicon-trash'></span> Eliminar
+                                    </button>
+                                </td>
+                                <!--<td><a onclick=""><span class ='glyphicon glyphicon-user'></span>Eliminar</a></td>-->
                                 <!--<td><a href ='Alumno/ModificarAlumno/<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-user'></span>Modificar</a></td>-->
                                 <!--<td><a href ='Alumno/EliminarAlumno<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-trash'></span>Eliminar</a></td>-->
                             </tr>
@@ -81,11 +84,9 @@
             </div>
         </div>
     </div>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#alumnoModal">
-        Launch demo modal
-    </button>
     <?php $this->load->view("modal/alumnoModal"); ?> 
 </div>
 <?php $this->load->view("templates/resources"); ?>
+
 <script src="<?php echo base_url() . "assets/jsrequired/alumnos.js"; ?>"></script>
 

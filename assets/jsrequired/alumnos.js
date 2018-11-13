@@ -40,16 +40,17 @@ var addAlumno = function () {
 
 var modifyAlumno = function () {
     var params = {
-        nombre: $("#nombre").val(),
-        apellido: $("#apellido").val(),
-        cumpleanos: $("#cumpleanos").val(),
-        grado: $("#grado").val(),
-        nivel: $("#nivel").val()
+        id_alumno: $("#idAlumno").val(),
+        nombre: $("#m_nombre").val(),
+        apellido: $("#m_apellido").val(),
+        cumpleanos: $("#m_cumpleanos").val(),
+        grado: $("#m_grado").val(),
+        nivel: $("#m_nivel").val()
     };
 
     if (!isArrayEmpty(params)) {
         $.ajax({
-            url: "alumno/insertalumno",
+            url: "alumno/updatealumno",
             type: "POST",
             async: true,
             dataType: 'json',
