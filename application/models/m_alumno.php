@@ -23,7 +23,7 @@ class m_alumno extends CI_Model {
 //        return $this->db->query("INSERT INTO tb_alumno(nombre,apellido,cumpleanos,grado,nivel) values ({$nombre},{$apellido},{$cumpleanos},{$grado},{$nivel})");
 //    }
     public function ActualizarAlumno (int $id_alumno,string $nombre,string $apellido,string $cumpleanos,string $grado,string $nivel){
-        print_r("entro actualizar");
+        //print_r("entro actualizar");
 
          return $this->db->query("UPDATE tb_alumno  SET nombre ={$nombre},apellido ,={$apellido},cumpleanos = {$cumpleanos},grado ={$grado},nivel ={$nivel} where id_alumno={id_alumno} ");
      print_r("entro actualizar");

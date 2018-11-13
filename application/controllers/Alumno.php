@@ -46,7 +46,7 @@ class alumno extends CI_Controller {
      
     
         if ($id_alumno != null) {
-               echo " modifica";
+               // echo " modifica";
             $id_alumno = $this->db->escape((int)$id_alumno);
 
             $alumnos = $this->m_alumno->ModificarAlumno($id_alumno);
@@ -57,18 +57,19 @@ class alumno extends CI_Controller {
     }
 
     public function ActualizarAlumno(){
-    
-       if ($this->input->post()) {
-             echo "no entra";
+          print_r("entro ActualizarAlumno");
+       if($this->input->post()) {
+
             $id_alumno = $this->db->escape((int)$_POST["id_alumno"]);
             $nombre = $this->db->escape($_POST["nombre"]);
             $apellido = $this->db->escape($_POST["apellido"]);
             $cumpleanos = $this->db->escape($_POST["cumpleanos"]);
             $grado = $this->db->escape($_POST["grado"]);
             $nivel = $this->db->escape($_POST["nivel"]);
-             $this->m_alumno->ActualizarAlumno($id_alumno,$nombre, $apellido, $cumpleanos, $grado, $nivel);
-             // print_r($this->m_alumno);
-             /*debe regresar a la pestaña alumnos*/
+             
+           if ($this->m_alumno->ActualizarAlumno($id_alumno,$nombre, $apellido, $cumpleanos, $grado, $nivel)) {
+                    header("Location:".baser_url()."alumno");
+                }
         }
 
     }

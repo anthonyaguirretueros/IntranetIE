@@ -65,6 +65,7 @@
                                 <td><?php echo $alumno->cumpleanos ?></td>
                                 <td><?php echo $alumno->grado ?></td>
                                 <td><?php echo $alumno->nivel ?></td>
+                                 <td><a href ='Alumno/ActualizarAlumno/<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-user'></span>Modificar</a></td>
                                 <td><a href ='Alumno/ModificarAlumno/<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-user'></span>Modificar</a></td>
                                 <td><a href ='Alumno/EliminarAlumno<?php echo $alumno->id_alumno ?>'><span class ='glyphicon glyphicon-trash'></span>Eliminar</a></td>
                             </tr>
