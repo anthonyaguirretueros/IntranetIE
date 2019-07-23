@@ -34,7 +34,10 @@
                         </div>	
                         <div class="form-group col-lg-12">
                             <label>nivel</label>
-                            <input type="text" name="nivel" id="nivel" class="form-control" required="true">
+                            <select class="form-control" id="nivel">
+                                <option value="primaria">Primaria</option>
+                                <option value="secundaria">Secundaria</option>
+                            </select>
                         </div>
                         <!-- <div class="clear-fix"></div> -->
                         <div class="form-group col-lg-12">
