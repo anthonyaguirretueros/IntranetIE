@@ -42,11 +42,19 @@ class Migration_Install_ion_auth extends CI_Migration
         $data = [
             [
                 'name' => 'admin',
-                'description' => 'Administrator',
+                'description' => 'Administradores',
             ],
             [
-                'name' => 'members',
-                'description' => 'General User',
+                'name' => 'docente',
+                'description' => 'Docentes',
+            ],
+            [
+                'name' => 'estudiante',
+                'description' => 'Estudiantes',
+            ],
+            [
+                'name' => 'apoderado',
+                'description' => 'Apoderados',
             ],
         ];
         $this->db->insert_batch($this->tables['groups'], $data);
@@ -162,32 +170,60 @@ class Migration_Install_ion_auth extends CI_Migration
         // Dumping data for table 'users'
         $data = [[
             'ip_address' => '127.0.0.1',
-            'username' => 'administrator',
+            'username' => 'administrador',
             'password' => '$2y$08$200Z6ZZbp3RAEXoaWcMA6uJOFicwNZaqk4oDhqTUiFXFe63MG.Daa',
-            'email' => 'admin@admin.com',
+            'email' => 'admin@intranet.com',
             'activation_code' => '',
             'forgotten_password_code' => null,
             'created_on' => '1268889823',
             'last_login' => '1268889823',
             'active' => '1',
-            'first_name' => 'Admin',
-            'last_name' => 'istrator',
-            'company' => 'SEAL',
+            'first_name' => 'Administrador',
+            'last_name' => 'Administrador',
+            'company' => 'INTRANET',
             'phone' => '0',
         ], [
             'ip_address' => '127.0.0.1',
-            'username' => 'demo',
-            'password' => '$2y$10$ogM82ZkfiaJGvTmEKKhdq.PZAA/vi8DQlHVhJe7v5VsSGSd3Vv9yS',
-            'email' => 'demo@demo.com',
+            'username' => 'profesor',
+            'password' => '$2y$08$200Z6ZZbp3RAEXoaWcMA6uJOFicwNZaqk4oDhqTUiFXFe63MG.Daa',
+            'email' => 'profesor@intranet.com',
             'activation_code' => '',
             'forgotten_password_code' => null,
             'created_on' => '1562890718',
             'last_login' => '1562890718',
             'active' => '1',
-            'first_name' => 'Demo',
-            'last_name' => 'Demo',
-            'company' => 'Demo',
-            'phone' => '999555333',
+            'first_name' => 'Profesor',
+            'last_name' => 'Profesor',
+            'company' => 'INTRANET',
+            'phone' => '0',
+        ], [
+            'ip_address' => '127.0.0.1',
+            'username' => 'alumno',
+            'password' => '$2y$08$200Z6ZZbp3RAEXoaWcMA6uJOFicwNZaqk4oDhqTUiFXFe63MG.Daa',
+            'email' => 'alumno@intranet.com',
+            'activation_code' => '',
+            'forgotten_password_code' => null,
+            'created_on' => '1562890718',
+            'last_login' => '1562890718',
+            'active' => '1',
+            'first_name' => 'Alumno',
+            'last_name' => 'Alumno',
+            'company' => 'INTRANET',
+            'phone' => '0',
+        ], [
+            'ip_address' => '127.0.0.1',
+            'username' => 'apoderado',
+            'password' => '$2y$08$200Z6ZZbp3RAEXoaWcMA6uJOFicwNZaqk4oDhqTUiFXFe63MG.Daa',
+            'email' => 'apoderado@intranet.com',
+            'activation_code' => '',
+            'forgotten_password_code' => null,
+            'created_on' => '1562890718',
+            'last_login' => '1562890718',
+            'active' => '1',
+            'first_name' => 'Apoderado',
+            'last_name' => 'Apoderado',
+            'company' => 'INTRANET',
+            'phone' => '0',
         ]];
         $this->db->insert_batch($this->tables['users'], $data);
 
@@ -223,12 +259,16 @@ class Migration_Install_ion_auth extends CI_Migration
                 'group_id' => '1',
             ],
             [
-                'user_id' => '1',
+                'user_id' => '2',
                 'group_id' => '2',
             ],
             [
-                'user_id' => '2',
-                'group_id' => '2',
+                'user_id' => '3',
+                'group_id' => '3',
+            ],
+            [
+                'user_id' => '4',
+                'group_id' => '4',
             ],
         ];
         $this->db->insert_batch($this->tables['users_groups'], $data);

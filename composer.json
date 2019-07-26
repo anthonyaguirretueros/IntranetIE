@@ -12,7 +12,9 @@
 	},
 	"require": {
 		"php": ">=5.3.7",
-		"vlucas/phpdotenv": "^3.4"
+		"vlucas/phpdotenv": "^3.4",
+		"almasaeed2010/adminlte": "v3.0.0-beta.1",
+		"twig/twig": "^2.11"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
