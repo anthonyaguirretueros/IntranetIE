@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => 'intranet-mysql',
 	'username' => 'root',
 	'password' => '',
 	'database' => 'intranet',
