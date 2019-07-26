@@ -1,13 +1,10 @@
 <?php
 
-class Home extends CI_Controller {
-
-    public function __construct() {
-	parent::__construct();
+class Home extends MY_Controller
+{
+    public function index()
+    {
+        $data = $this->ion_auth_data;
+        $this->load->twig('home', $data);
     }
-
-    public function index() {
-	$this->load->view('home');
-    }
-
 }
