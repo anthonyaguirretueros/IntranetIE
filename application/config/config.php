@@ -27,7 +27,7 @@ $config['base_url'] = getenv('BASE_URL');
 
 
 
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
