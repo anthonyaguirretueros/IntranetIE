@@ -1,7 +1,8 @@
-create database intranettesting;
-use intranettesting;
+DROP DATABASE   IF     EXISTS intranet;
+CREATE DATABASE IF NOT EXISTS intranet;
+USE intranet;
 
-create table login_attemps(
+create table login_attempts(
 	id int,
     ip_address varchar(45),
     login varchar(100),
