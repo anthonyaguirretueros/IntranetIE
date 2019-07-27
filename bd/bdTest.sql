@@ -1,4 +1,3 @@
-drop database intranettesting;
 create database intranettesting;
 use intranettesting;
 
